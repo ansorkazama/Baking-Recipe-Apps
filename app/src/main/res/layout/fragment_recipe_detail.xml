@@ -3,9 +3,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
     <ScrollView
+        android:id="@+id/scrolling_recipe_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_id_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusableInTouchMode="true">
@@ -14,7 +16,9 @@
                 layout="@layout/toolbar"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="0dp"
+                android:layout_width="0dp" />
             <android.support.v7.widget.CardView
                 android:id="@+id/cv_recipe_detail_ingredient_heading_holder"
                 android:layout_width="0dp"
@@ -27,6 +31,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tb_toolbar">
                 <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraint_id_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
@@ -84,7 +89,7 @@
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recipe_detail_steps_recycler_view"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
