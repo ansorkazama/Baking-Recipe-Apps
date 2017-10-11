@@ -44,7 +44,7 @@ import static org.hamcrest.core.IsNot.not;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest2 {
+public class RecipeShareIntentTest {
 
     public static final String RECIPE_NAME = "Brownies";
 

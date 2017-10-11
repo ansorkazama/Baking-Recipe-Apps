@@ -28,12 +28,13 @@ import static org.hamcrest.core.Is.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class MainActivityRecyclerViewTest {
 
-    public static final String RECIPE_NAME = "Brownies";
+    public static final String RECIPE_NAME = "Cheesecake";
 
     @Rule
-    public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
+    public ActivityTestRule<MainActivity> mActivityTestRule = new
+            ActivityTestRule<>(MainActivity.class);
 
     //Clicks on a RecyclerView Recipe item and checks if new activity's toolbar matches recipe
     @Test

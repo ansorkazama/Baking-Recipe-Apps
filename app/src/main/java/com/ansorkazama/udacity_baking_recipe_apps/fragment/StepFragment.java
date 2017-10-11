@@ -97,6 +97,24 @@ public class StepFragment extends Fragment implements ExoPlayer.EventListener {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        releasePlayer();
+        /*if (mMediaSession!=null){
+            mMediaSession.setActive(false);
+        }*/
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        releasePlayer();
+        /*if (mMediaSession!=null){
+            mMediaSession.setActive(false);
+        }*/
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         releasePlayer();
@@ -209,17 +227,17 @@ public class StepFragment extends Fragment implements ExoPlayer.EventListener {
         @Override
         public void onPause() {
             mExoPlayer.setPlayWhenReady(false);
-            releasePlayer();
+//            releasePlayer();
         }
 
-        @Override
+        /*@Override
         public void onStop() {
             super.onStop();
             releasePlayer();
             if(mMediaSession!=null) {
                 mMediaSession.setActive(false);
             }
-        }
+        }*/
 
         @Override
         public void onSkipToPrevious() {
