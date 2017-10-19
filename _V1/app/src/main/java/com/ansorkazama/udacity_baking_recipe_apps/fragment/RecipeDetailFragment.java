@@ -95,7 +95,7 @@ public class RecipeDetailFragment extends Fragment implements RecipeDetailPresen
         final View view = binding.getRoot();
 
         binding.tbToolbar.toolbar.setTitle(mRecipe.getName());
-        ((AppCompatActivity) getActivity()).setSupportActionBar(binding.tbToolbar.toolbar);
+//        ((AppCompatActivity) getActivity()).setSupportActionBar(binding.tbToolbar.toolbar);
 
         //Save dynamically created checkbox view state on rotation
         if(mIngredientList.size()>0) {
